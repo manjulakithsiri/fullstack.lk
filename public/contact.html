@@ -157,22 +157,50 @@
     </nav>
     <div style="height:64px;"></div>
     <h1 class="gradient-animated responsive-title">
-        Empowering Minds. Building Solutions
+        Say Hello !
     </h1>
    
-    <div class="container">
-        <a class="link-img" href="https://academy.example.com" target="_blank">
-            <img src="academy.png" alt="Academy">
-            <div class="caption">To Learn Web Development</div>
-        </a>
-        <a class="link-img" href="https://software.example.com" target="_blank">
-            <img src="software.png" alt="Software">
-            <div class="caption">Softwares For Your Business </div>
-        </a>
-        <a class="link-img" href="https://systems.example.com" target="_blank">
-            <img src="systems.png" alt="Systems">
-            <div class="caption">For Other Hardware Systems</div>
-        </a>
+    <div class="container " >
+    <form action="mailto:info@fullstack.com" method="POST" enctype="text/plain" style="background:#fff; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.07); padding:32px 28px; ; width:100%; display:flex; flex-direction:column; gap:18px;">
+        <h2 style="margin:0 0 12px 0; color:#222; font-weight:600; text-align:center;">Contact Us</h2>
+        <label for="name" style="font-weight:500; color:#444;">Name</label>
+        <input type="text" id="name" name="Name" required style="padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1em;">
+        
+        <label for="email" style="font-weight:500; color:#444;">Email</label>
+        <input type="email" id="email" name="Email" required style="padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1em;">
+        
+        <label for="message" style="font-weight:500; color:#444;">Message</label>
+        <textarea id="message" name="Message" rows="5" required style="padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1em; resize:vertical;"></textarea>
+        
+        <button type="submit" style="background:#007cf0; color:#fff; border:none; border-radius:6px; padding:12px 0; font-size:1.1em; font-weight:600; cursor:pointer; transition:background 0.2s;">Send Message</button>
+        <div style="text-align:center; color:#888; font-size:0.97em; margin-top:8px;">
+            Or email us at <a href="mailto:info@fullstack.com" style="color:#007cf0; text-decoration:underline;">info@fullstack.com</a>
+        </div>
+    </form>
+
+   
+    <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:18px;width:50%">
+        <div class="link-img">
+            <div class="caption" style="font-size:1em;">
+                <i class="fa fa-phone" style="color:#007cf0; margin-right:6px; font-size:1em;"></i>
+                +1 234 567 8901
+            </div>
+        </div>
+        <div class="link-img">
+            <div class="caption" style="font-size:1em;">
+                <i class="fa fa-map-marker-alt" style="color:#EC2024; margin-right:6px; font-size:1em;"></i>
+                123 Main St, City, Country
+            </div>
+        </div>
+        <div class="link-img">
+            <div class="caption" style="font-size:1em;">
+                <i class="fa fa-clock" style="color:#f7971e; margin-right:6px; font-size:1em;"></i>
+                Mon-Fri: 9am - 6pm
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
     </div>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
