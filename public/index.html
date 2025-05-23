@@ -128,6 +128,29 @@
                 display: block;
             }
         }
+
+        #whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 200;
+    background: #25d366;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+#whatsapp-float:hover {
+    background: #20ba5a;
+    transform: scale(1.08);
+}
       
     </style>
 </head>
@@ -228,6 +251,11 @@
             </script>
         </div>
     </footer>
+
+    <a href="https://wa.me/94714360360" target="_blank" id="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
     <script>
         // Hamburger toggle
         const navToggle = document.getElementById('nav-toggle');
