@@ -142,6 +142,15 @@
             <div id="nav-links" style="display:flex; align-items:center;">
                 <a href="#" style="color:#222; text-decoration:none; margin:0 16px; font-size:1em;">Home</a>
                 <a href="#" style="color:#222; text-decoration:none; margin:0 16px; font-size:1em;">About</a>
+
+            <div style="display:inline-block; position:relative; margin:0 16px;">
+                <a href="#" style="color:#222; text-decoration:none; font-size:1em;">Projects <i class="fa fa-caret-down"></i></a>
+                <div style="display:none; position:absolute; left:0; top:100%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); border-radius:6px; min-width:140px; z-index:10;" class="projects-dropdown">
+                    <a href="#" style="display:block; color:#222; text-decoration:none; padding:10px 20px; font-size:1em; border-bottom:1px solid #eee;">React</a>
+                    <a href="#" style="display:block; color:#222; text-decoration:none; padding:10px 20px; font-size:1em;">Laravel</a>
+                </div>
+            </div>
+           
                 <div style="display:inline-block; position:relative; margin:0 16px;">
                     <a href="#" style="color:#222; text-decoration:none; font-size:1em;">Services <i class="fa fa-caret-down"></i></a>
                     <div style="display:none; position:absolute; left:0; top:100%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); border-radius:6px; min-width:160px; z-index:10;" class="services-dropdown">
@@ -163,15 +172,15 @@
    
     <div class="container">
         <a class="link-img" href="https://academy.example.com" target="_blank">
-            <img src="academy.png" alt="Academy">
+            <img src="images/academy.png" alt="Academy">
             <div class="caption">To Learn Web Development</div>
         </a>
         <a class="link-img" href="https://software.example.com" target="_blank">
-            <img src="software.png" alt="Software">
+            <img src="images/software.png" alt="Software">
             <div class="caption">Softwares For Your Business </div>
         </a>
         <a class="link-img" href="https://systems.example.com" target="_blank">
-            <img src="systems.png" alt="Systems">
+            <img src="IMAGES/systems.png" alt="Systems">
             <div class="caption">For Other Hardware Systems</div>
         </a>
     </div>
@@ -251,6 +260,35 @@
                 }
             });
         }
+
+
+        //projects dropdown
+       
+                // Projects dropdown show/hide logic
+                (function() {
+                    const projectsMenu = document.querySelectorAll('#nav-links > div')[0];
+                    const projectsDropdown = projectsMenu.querySelector('.projects-dropdown');
+                    function isMobile() {
+                        return window.innerWidth <= 700;
+                    }
+                    projectsMenu.addEventListener('mouseenter', () => {
+                        if (!isMobile()) {
+                            projectsDropdown.style.display = 'block';
+                        }
+                    });
+                    projectsMenu.addEventListener('mouseleave', () => {
+                        if (!isMobile()) {
+                            projectsDropdown.style.display = 'none';
+                        }
+                    });
+                    projectsMenu.addEventListener('click', (e) => {
+                        if (isMobile()) {
+                            e.preventDefault();
+                            projectsDropdown.style.display = projectsDropdown.style.display === 'block' ? 'none' : 'block';
+                        }
+                    });
+                })();
+          
     </script>
 </body>
 </html>
